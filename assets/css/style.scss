@@ -104,7 +104,7 @@ li.navigation-link, li.mobile-navigation-link {
     display: inline-flex;
 }
 li.navigation-link, li.mobile-navigation-link {
-    color: rgba(0, 0, 0, 0.5);
+    color: $text_color;
     transition: color 0.1s ease-in-out;
     white-space: nowrap;
 }
@@ -133,7 +133,7 @@ li.navigation-link-active:hover, .mobile-navigation-active:hover {
 li.navigation-link-title, {
     margin-right: 50px;
     font-size: 24px;
-    color: black;
+    color: $text_color;
 }
 .mobile-navigation {
     display: none;
@@ -244,4 +244,9 @@ li.navigation-home:hover {
 
 body, html, .title_bar {
     background: $background_color;
+}
+
+header {
+    // remove default theme background
+    background: none;
 }
