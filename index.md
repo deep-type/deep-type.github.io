@@ -1,6 +1,5 @@
 ---
 title: DeepType
-description: Superhuman Entity Linking, All you need is type interactions
 ---
 <div>
 <table class="links">
