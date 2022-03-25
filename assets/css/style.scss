@@ -13,7 +13,6 @@ header {
     margin-top: 36px;
     position: relative;
     border-bottom: none;
-    box-shadow: 0 0 4px rgba(0,0,0,.14),0 2px 4px rgba(0,0,0,.17);
     overflow: hidden;
     height: 210px;
 }
@@ -135,6 +134,9 @@ li.navigation-link-title, {
     font-size: 24px;
     color: $text_color;
 }
+li.navigation-link-title:hover {
+    color: $text_color;
+}
 .mobile-navigation {
     display: none;
 }
@@ -172,7 +174,6 @@ body {
 
 .other-site-nav {
     background: $background_color;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     padding-bottom: 2px;
     padding-left: 50px;
 }
@@ -265,4 +266,12 @@ table.links td {
     padding-right: 5px;
     padding-top: 2px;
     padding-bottom: 2px;
+}
+
+.floating-description h2 {
+    color: #e4bbfa;
+    font-size: inherit;
+    background: -webkit-linear-gradient(#becdf7, #e4bbfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
