@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" media="screen" type="text/css">
+    <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}" media="print" type="text/css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"> -->
+
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+{% seo %}
+  </head>
+  <body>
+    <header>
+      <div class="title_bar">
+        {% assign temp_title = site.title %}
+        {% assign description = site.description %}
+        {% assign root = '/' %}
+        <ul class="navigation">
+            <li class="navigation-link navigation-link-title"><a href="{{ root | absolute_url }}">
+              {{ temp_title | default: site.github.repository_name }}
+            </a></li>
+        {% for site_page in site.pages %}
+          {% assign class = "navigation-link hide-on-mobile" %}
+          {% if page.url == site_page.url %}
+              {% assign class = "navigation-link hide-on-mobile navigation-link-active" %}
+          <li class="{{ class }}"><a href="{{ site_page.url }}" alt="{{ site_page.title }}">{{ site_page.title }}</a></span>
+          {% endif %}
+        {% endfor %}
+        </ul>
+      </div>
+      </div>
+      <div class="floating-description">{{ description | default: site.github.project_tagline }}</div>
+    </header>
+    <ul class="mobile-navigation">
+    {% for site_page in site.pages %}
+      {% assign class = "mobile-navigation-link" %}
+      {% if page.url == site_page.url %}
+          {% assign class = "mobile-navigation-link mobile-navigation-link-active" %}
+      <li class="{{ class }}"><a href="{{ site_page.url }}" alt="{{ site_page.title }}">{{ site_page.title }}</a></span>
+      {% endif %}
+    {% endfor %}
+    </ul>
+
+    <div id="content-wrapper">
+      {{ content }}
+    </div>
+    </div>
+
+    {% if site.google_analytics %}
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Z08DMBC97"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-8Z08DMBC97');
+      </script>
+    {% endif %}
+  </body>
+</html>
