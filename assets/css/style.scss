@@ -3,12 +3,14 @@
 
 @import "{{ site.theme }}";
 
+$background_color: rgb(11, 11, 10);
+$text_color: white;
+
 header {
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Oxygen","Ubuntu", "Cantarell", "Fira Sans", "Open Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     margin: 0;
     margin-top: 36px;
-    background:#9db4be;
     position: relative;
     border-bottom: none;
     box-shadow: 0 0 4px rgba(0,0,0,.14),0 2px 4px rgba(0,0,0,.17);
@@ -60,7 +62,7 @@ text-indent: 0;
     left: 50px;
     top: 50%;
     transform: translateY(-50%);
-    color: rgb(11, 0, 62);
+    color: $text_color;
     font-size: 27px;
     max-width: 500px;
 }
@@ -68,7 +70,7 @@ text-indent: 0;
 .title_bar {
     position: fixed;
     top: 0;
-    background: white;
+    background: $background_color;
     width: 100%;
     z-index: 100;
     padding-top: 5px;
@@ -142,56 +144,9 @@ li.navigation-link-title, {
     padding: 0 10px;
     height: 40px;
     line-height: 40px;
-    background: #F7FBFA;
+    background: $background_color;
     margin-right: 2px;
     border: 1px solid rgba(0,0,0,0.05);
-}
-
-.speaker-bio {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.speaker-bio .img-holder {
-    width: 150px;
-    height: 150px;
-    position: relative;
-    overflow: hidden;
-    display: block;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 5px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    margin-right: 30px;
-}
-.speaker-bio .img {
-    height: 100%;
-    width: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.schedule-table {
-    font-size: 20px;
-    line-height: 1.5;
-    cellpadding: 10;
-}
-.schedule-table td, .schedule-table th {
-    padding: 5px 10px 5px 10px;
 }
 
 ul.footnotes {
@@ -202,70 +157,21 @@ ul.footnotes {
     padding-top: 5px;
 }
 
-/* slight gray/blue tinge */
-.speaker_section, .areas_of_interest_section {
-    background: #f6f9fc;
-}
-.speaker_section h2, .speaker_section h3,
-.areas_of_interest_section h2, .areas_of_interest_section h3 {
-    color: #32325d;
-}
-.overview_section h2, .virtual_schedule_section h2 {
-    color: black;
-}
-
-.speaker_section h2, .overview_section h2, .schedule_section h2, .areas_of_interest_section h2, .submission_section h2 {
-    font-size: 36px;
-    text-align: center;
-}
 body {
-    background: white;
+    background: $background_color;
 }
-
-.areas_of_interest_section li {
-    color: rgb(104, 116, 130);
-}
-
-.areas_of_interest_section li ul {
-    list-style-type:square;
-}
-.areas_of_interest_section li li {
-    color: #5959a6;
-}
-
-.organizers-section, .contact-us-section {
-    color: #8898aa;
-    background: #f6f9fc;
-    border-top: 2px solid rgba(207,215,223,.25);
-}
-
-.organizers-section li b, .contact-us-section li b {
-    color: rgb(136, 152, 170);
-}
-
-.session-authors {
-    font-size: 15px;
-}
-
-
-.speaker_section, .areas_of_interest_section, .schedule_section, .organizers-section, .contact-us-section {
-    padding-bottom: 50px;
-    padding-top: 50px;
-}
-
-
 
 .navigation-home-message, li.navigation-home {
     font-size: 12px;
     line-height: 16px;
-    color: #333;
+    color: $text_color;
 }
 .navigation-home-message {
     opacity: 0.8;
 }
 
 .other-site-nav {
-    background: #f6f9fc;
+    background: $background_color;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     padding-bottom: 2px;
     padding-left: 50px;
@@ -273,7 +179,7 @@ body {
 
 li.navigation-home {
     padding: 0 6px;
-    background: white;
+    background: $background_color;
     opacity: 0.9;
     height: auto;
     border: 1px solid rgba(0,0,0,0.05);
@@ -290,10 +196,6 @@ li.navigation-home:hover {
     }
     .mobile-navigation {
         display: block;
-    }
-    .speaker_section, .areas_of_interest_section .schedule_section, .organizers-section, .contact-us-section {
-        padding-bottom: 20px;
-        padding-top: 20px;
     }
     .mobile-super-hidden {
         display: none !important;
@@ -326,11 +228,6 @@ li.navigation-home:hover {
 }
 
 @media only screen and (max-width: 500px) {
-    .speaker-bio .img-holder {
-        width: 100px;
-        height: 100px;
-        margin-right: 10px;
-    }
     .other-site-nav {
         padding-left: 5px;
     }
@@ -343,4 +240,8 @@ li.navigation-home:hover {
     .mobile-480 {
         visibility: visible;
     }
+}
+
+body, html, .title_bar {
+    background: $background_color;
 }
