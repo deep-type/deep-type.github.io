@@ -250,3 +250,18 @@ header {
     // remove default theme background
     background: none;
 }
+
+table.links {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+table.links, table.links td, table.links tr {
+    border: none;
+}
+table.links td {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}

@@ -3,7 +3,7 @@ title: DeepType
 description: Superhuman Entity Linking, All you need is type interactions
 ---
 <div>
-<table>
+<table class="links">
 <tr>
 <td>
 <a href="https://github.com/deep-type/deeptype2">Code</a>
